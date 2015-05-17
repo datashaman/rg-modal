@@ -5,7 +5,7 @@
   "main": "rg-modal.min.js",
   "scripts": {
     "lint": "jshint . --exclude-path=.gitignore",
-    "riot": "riot src dist/rg-modal.js --type es6",
+    "riot": "riot src dist/rg-modal.js --type es6 --ext html",
     "uglify": "uglifyjs --compress --mangle --output dist/rg-modal.min.js -- dist/rg-modal.js",
     "build": "npm run riot && npm run uglify",
     "test": "istanbul cover -- _mocha --timeout=10000"
