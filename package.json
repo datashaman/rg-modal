@@ -1,0 +1,38 @@
+{
+  "name": "rg-modal",
+  "version": "0.1.0",
+  "description": "Modal popup component",
+  "main": "rg-modal.min.js",
+  "scripts": {
+    "lint": "jshint . --exclude-path=.gitignore",
+    "riot": "riot src dist/rg-modal.js --type es6",
+    "uglify": "uglifyjs --compress --mangle --output dist/rg-modal.min.js -- dist/rg-modal.js",
+    "build": "npm run riot && npm run uglify",
+    "test": "istanbul cover -- _mocha --timeout=10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RiotGear/rg-modal.git"
+  },
+  "keywords": [
+    "riotjs",
+    "riot",
+    "component",
+    "modal"
+  ],
+  "author": "Gregory Pratt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RiotGear/rg-modal/issues"
+  },
+  "homepage": "https://github.com/RiotGear/rg-modal",
+  "devDependencies": {
+    "babel": "~5.4.3",
+    "chai": "~2.2.0",
+    "istanbul": "~0.3.13",
+    "jshint": "~2.7.0",
+    "mocha": "~2.2.4",
+    "riot": "~2.0.15",
+    "uglify-js": "~2.4.21"
+  }
+}
