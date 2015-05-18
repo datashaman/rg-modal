@@ -9,10 +9,12 @@
 			top: 50%;
 			left: 50%;
 			transform: translate3d(-50%, -75%, 0);
-			background-color: white;
-			border: 1px solid #C3C3C3;
-			border-radius: 3px;
 			z-index: 100;
+		}
+
+		.container {
+			background-color: white;
+			border: 1px solid #DDDDDD;
 		}
 
 		header {
@@ -58,7 +60,6 @@
 			text-transform: uppercase;
 			cursor: pointer;
 			outline: none;
-			border-radius: 3px;
 			background-color: white;
 		}
 
@@ -68,21 +69,31 @@
 		}
 	</style>
 
-	<header>
-		<button type="button" class="close" aria-label="Close" onclick="{ opts.onclose }">
-			<span aria-hidden="true">&times;</span>
-		</button>
-		<h3>{ opts.heading }</h3>
-	</header>
+	<div class="container" if="{ opts.modal.visible }">
+		<header>
+			<button type="button" class="close" aria-label="Close" onclick="{ close }">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<h3>{ opts.modal.heading }</h3>
+		</header>
 
-	<div class="body">
-		<yield/>
+		<div class="body">
+			<yield/>
+		</div>
+
+		<footer>
+			<button each="{ opts.modal.buttons }" type="button" onclick="{ action }" style="{ style }">
+				{ text }
+			</button>
+		</footer>
 	</div>
 
-	<footer>
-		<button each="{ opts.buttons }" type="button" onclick="{ action }" style="{ style }">
-			{ text }
-		</button>
-	</footer>
+	<script>
+		var _this = this;
+		_this.close = function (e) {
+			opts.modal.visible = false;
+			opts.modal.onclose(e);
+		};
+	</script>
 
 </rg-modal>

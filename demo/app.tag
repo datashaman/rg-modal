@@ -1,9 +1,6 @@
 <demo-app>
 
-	<rg-modal heading="{ modal.heading }"
-						buttons="{ modal.buttons }"
-						onclose="{ modal.onclose }"
-						show="{ modal.visible }">
+	<rg-modal modal="{ modal }">
 		Modal body text
 	</rg-modal>
 
@@ -16,25 +13,22 @@
 			visible: false,
 			buttons: [
 				{ action: buttonClicked, text: 'Save' },
-				{ action: closeModal, text: 'Cancel', style: 'color: cornflowerblue;' }
+				{ action: buttonClicked, text: 'Cancel', style: 'color: cornflowerblue;' }
 			],
-			onclose: closeModal
+			onclose: function (e) {
+				console.log('Closed');
+				console.log(e);
+			}
 		};
 
 		_this.showModal = function () {
 			_this.modal.visible = true;
-			_this.update();
-		}
-
-		function closeModal() {
-			_this.modal.visible = false;
-			_this.update();
-		}
+		};
 
 		function buttonClicked(e) {
-			alert('Button clicked');
+			console.log('Button clicked');
 			console.log(e);
-			closeModal();
+			_this.modal.visible = false;
 		}
 	</script>
 
