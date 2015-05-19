@@ -40,6 +40,7 @@
 			bottom: 0;
 			left: 0;
 			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 100;
 		}
 
 		.modal {
@@ -51,8 +52,7 @@
 			left: 50%;
 			transform: translate3d(-50%, -75%, 0);
 			background-color: white;
-			border: 1px solid #DDDDDD;
-			z-index: 100;
+			z-index: 101;
 		}
 
 		header {
