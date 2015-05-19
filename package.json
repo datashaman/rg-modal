@@ -6,9 +6,9 @@
   "scripts": {
     "lint": "jshint . --exclude-path=.gitignore",
     "riot": "riot src dist/rg-modal.js",
+    "postriot": "riot demo",
     "uglify": "uglifyjs --output dist/rg-modal.min.js -- dist/rg-modal.js",
-    "demo": "riot demo",
-    "build": "npm run riot && npm run uglify && npm run demo",
+    "build": "npm run riot && npm run uglify",
     "test": "istanbul cover -- _mocha --timeout=10000"
   },
   "repository": {
