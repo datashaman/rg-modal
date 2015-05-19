@@ -25,7 +25,6 @@
 		_this.close = function (e) {
 			opts.modal.visible = false;
 			opts.modal.onclose(e);
-			e.stopPropagation();
 		};
 	</script>
 
