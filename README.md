@@ -2,7 +2,7 @@
 
 ## rg-modal - a modal component
 
-example.png
+<img src="https://raw.githubusercontent.com/RiotGear/rg-modal/master/demo/img/example.png" width="500px" />
 
 ### Use
 
