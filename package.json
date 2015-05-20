@@ -2,7 +2,7 @@
   "name": "rg-modal",
   "version": "0.1.0",
   "description": "Modal popup component",
-  "main": "rg-modal.min.js",
+  "main": "dist/rg-modal.min.js",
   "scripts": {
     "lint": "jshint . --exclude-path=.gitignore",
     "riot": "riot src dist/rg-modal.js",
