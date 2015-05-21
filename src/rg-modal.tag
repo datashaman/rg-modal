@@ -24,7 +24,9 @@
 		var _this = this;
 		_this.close = function (e) {
 			opts.modal.visible = false;
-			opts.modal.onclose(e);
+			if (opts.modal.onclose) {
+				opts.modal.onclose(e);
+			}
 		};
 	</script>
 
