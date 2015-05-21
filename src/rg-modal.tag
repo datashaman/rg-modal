@@ -45,7 +45,6 @@
 		}
 
 		.modal {
-			font-family: helvetica neue, helvetica, arial, sans-serif;
 			color: #252519;
 			position: absolute;
 			width: 400px;
