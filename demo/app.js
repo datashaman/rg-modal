@@ -1,26 +1,19 @@
-riot.tag('demo-app', '<rg-modal modal="{ modal }"> Modal body text </rg-modal> <button type="button" onclick="{ showModal }">Show modal</button>', function (opts) {
+riot.tag('demo-app', '<rg-modal modal="{ modal }"> <p>To make the modal appear or disappear simply toggle the modal\'s <code>visible</code> property.</p> <pre><code>this.modal.visible = true|false;</code></pre> </rg-modal> <a href="#" onclick="{ showModal }">Show modal</a>', function (opts) {
 		var _this = this;
 		_this.modal = {
-			heading: 'Modal heading',
-			visible: false,
+			heading: 'rg-modal',
+			visible: true,
 			buttons: [
-				{ action: buttonClicked, text: 'Save' },
-				{ action: buttonClicked, text: 'Cancel', style: 'color: cornflowerblue;' }
-			],
-			onclose: function (e) {
-				console.log('Closed');
-				console.log(e);
-			}
+				{
+					action: function () {
+						_this.modal.visible = false;
+					}, text: 'Ok', style: 'color: white; background-color: #1fadc5; border-radius: 3px;'
+				}
+			]
 		};
 
 		_this.showModal = function () {
 			_this.modal.visible = true;
 		};
-
-		function buttonClicked(e) {
-			console.log('Button clicked');
-			console.log(e);
-			_this.modal.visible = false;
-		}
 	
 });
