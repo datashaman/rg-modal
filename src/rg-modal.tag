@@ -2,19 +2,19 @@
 
 	<div class="overlay" if="{ opts.modal.visible }" onclick="{ close }"></div>
 	<div class="modal" if="{ opts.modal.visible }">
-		<header>
+		<header class="header">
 			<button type="button" class="close" aria-label="Close" onclick="{ close }">
 				<span aria-hidden="true">&times;</span>
 			</button>
-			<h3>{ opts.modal.heading }</h3>
+			<h3 class="heading">{ opts.modal.heading }</h3>
 		</header>
 
 		<div class="body">
 			<yield/>
 		</div>
 
-		<footer>
-			<button each="{ opts.modal.buttons }" type="button" onclick="{ action }" style="{ style }">
+		<footer class="footer">
+			<button class="button" each="{ opts.modal.buttons }" type="button" onclick="{ action }" style="{ style }">
 				{ text }
 			</button>
 		</footer>
@@ -33,7 +33,7 @@
 	<style scoped>
 
 		.overlay {
-			position: absolute;
+			position: fixed;
 			width: 100%;
 			height: 100%;
 			top: 0;
@@ -45,25 +45,28 @@
 		}
 
 		.modal {
-			color: #252519;
-			position: absolute;
+			position: fixed;
 			width: 400px;
 			top: 50%;
 			left: 50%;
+			-webkit-transform: translate3d(-50%, -75%, 0);
+			-moz-transform: translate3d(-50%, -75%, 0);
+			-ms-transform: translate3d(-50%, -75%, 0);
+			-o-transform: translate3d(-50%, -75%, 0);
 			transform: translate3d(-50%, -75%, 0);
 			background-color: white;
+			color: #252519;
 			z-index: 101;
 		}
 
-		header {
+		.header {
 			position: relative;
 			text-align: center;
 		}
 
-		header h3 {
+		.heading {
 			padding: 20px 20px 0 20px;
 			margin: 0;
-			font-weight: normal;
 			font-size: 18px;
 		}
 
@@ -87,11 +90,11 @@
 			padding: 20px;
 		}
 
-		footer {
+		.footer {
 			padding: 0 20px 20px 20px;
 		}
 
-		footer button {
+		.footer .button {
 			padding: 10px;
 			margin: 0 5px 0 0;
 			border: none;
@@ -99,11 +102,6 @@
 			cursor: pointer;
 			outline: none;
 			background-color: white;
-		}
-
-		footer button:first-child {
-			background-color: cornflowerblue;
-			color: white;
 		}
 	</style>
 
