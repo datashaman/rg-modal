@@ -46,7 +46,8 @@
 
 		.modal {
 			position: fixed;
-			width: 400px;
+			width: 95%;
+			max-width: 420px;
 			top: 50%;
 			left: 50%;
 			-webkit-transform: translate3d(-50%, -75%, 0);
