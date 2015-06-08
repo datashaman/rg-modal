@@ -1,6 +1,6 @@
 {
-  "name": "rg-modal",
-  "version": "0.1.0",
+  "name": "riotgear-modal",
+  "version": "1.0.0",
   "description": "Modal popup component",
   "main": "dist/rg-modal.min.js",
   "scripts": {
@@ -11,6 +11,9 @@
     "build": "npm run riot && npm run uglify",
     "test": "istanbul cover -- _mocha --timeout=10000"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/RiotGear/rg-modal.git"
