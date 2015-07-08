@@ -1,6 +1,6 @@
 {
   "name": "riotgear-modal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Modal popup component",
   "main": "dist/rg-modal.min.js",
   "scripts": {
@@ -8,8 +8,7 @@
     "riot": "riot src dist/rg-modal.js",
     "postriot": "riot demo",
     "uglify": "uglifyjs --output dist/rg-modal.min.js -- dist/rg-modal.js",
-    "build": "npm run riot && npm run uglify",
-    "test": "istanbul cover -- _mocha --timeout=10000"
+    "build": "npm run riot && npm run uglify"
   },
   "files": [
     "dist"
@@ -31,12 +30,8 @@
   },
   "homepage": "https://github.com/RiotGear/rg-modal",
   "devDependencies": {
-    "babel": "~5.4.3",
-    "chai": "~2.2.0",
-    "istanbul": "~0.3.13",
     "jshint": "~2.7.0",
-    "mocha": "~2.2.4",
-    "riot": "~2.0.15",
+    "riot": "^2.2.2",
     "uglify-js": "~2.4.21"
   }
 }
