@@ -1,6 +1,6 @@
 {
   "name": "riotgear-modal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Modal popup component",
   "main": "dist/rg-modal.min.js",
   "scripts": {
