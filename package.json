@@ -1,6 +1,6 @@
 {
   "name": "riotgear-modal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Modal popup component",
   "main": "dist/rg-modal.min.js",
   "scripts": {
@@ -31,7 +31,7 @@
   "homepage": "https://github.com/RiotGear/rg-modal",
   "devDependencies": {
     "jshint": "~2.7.0",
-    "riot": "^2.2.2",
+    "riot": "~2.2.2",
     "uglify-js": "~2.4.21"
   }
 }
