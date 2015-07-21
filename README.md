@@ -1,4 +1,5 @@
-<img src="https://raw.githubusercontent.com/RiotGear/rg-modal/master/demo/img/example.png" width="500px" />
+<img src="https://raw.githubusercontent.com/RiotGear/rg-modal/master/demo/img/example.png" width="500px" /><br>
+<img src="https://raw.githubusercontent.com/RiotGear/rg-modal/master/demo/img/example2.png" width="500px" />
 
 ## Use
 
