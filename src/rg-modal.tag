@@ -97,6 +97,10 @@
 			font-size: 1.2em;
 		}
 
+		.modal.ghost .heading {
+			color: white;
+		}
+
 		.close {
 			position: absolute;
 			top: 5px;
