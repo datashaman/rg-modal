@@ -1,9 +1,9 @@
 <rg-modal>
 
-	<div class="overlay { expanded: opts.modal.visible }" onclick="{ close }"></div>
-	<div class="modal" if="{ opts.modal.visible }">
+	<div class="overlay { expanded: opts.modal.visible, ghost: opts.modal.ghost }" onclick="{ close }"></div>
+	<div class="modal { ghost: opts.modal.ghost }" if="{ opts.modal.visible }">
 		<header class="header">
-			<button type="button" class="close" aria-label="Close" onclick="{ close }">
+			<button if="{ opts.modal.close != false }" type="button" class="close" aria-label="Close" onclick="{ close }">
 				<span aria-hidden="true">&times;</span>
 			</button>
 			<h3 class="heading">{ opts.modal.heading }</h3>
@@ -17,6 +17,7 @@
 			<button class="button" each="{ opts.modal.buttons }" type="button" onclick="{ action }" style="{ style }">
 				{ text }
 			</button>
+			<div class="clear"></div>
 		</footer>
 	</div>
 
@@ -32,7 +33,8 @@
 
 	<style scoped>
 
-		.overlay {
+		.overlay,
+		.overlay.ghost {
 			position: fixed;
 			top: 0;
 			left: -100%;
@@ -50,9 +52,10 @@
 			z-index: 50;
 		}
 
-		.overlay.expanded {
+		.overlay.expanded,
+		.overlay.ghost.expanded {
 			left: 0;
-			background-color: rgba(0, 0, 0, 0.5);
+			background-color: rgba(0, 0, 0, 0.7);
 			-webkit-transition: background-color 0.8s ease, left 0s;
 			-moz-transition: background-color 0.8s ease, left 0s;
 			-ms-transition: background-color 0.8s ease, left 0s;
@@ -60,10 +63,12 @@
 			transition: background-color 0.8s ease, left 0s;
 		}
 
-		.modal {
+		.modal,
+		.modal.ghost {
 			position: fixed;
 			width: 95%;
-			max-width: 420px;
+			max-width: 500px;
+			font-size: 1.1em;
 			top: 50%;
 			left: 50%;
 			-webkit-transform: translate3d(-50%, -75%, 0);
@@ -76,6 +81,11 @@
 			z-index: 101;
 		}
 
+		.modal.ghost {
+			background-color: transparent;
+			color: white;
+		}
+
 		.header {
 			position: relative;
 			text-align: center;
@@ -84,7 +94,7 @@
 		.heading {
 			padding: 20px 20px 0 20px;
 			margin: 0;
-			font-size: 18px;
+			font-size: 1.2em;
 		}
 
 		.close {
@@ -92,15 +102,19 @@
 			top: 5px;
 			right: 5px;
 			padding: 0;
-			height: 20px;
-			width: 20px;
-			line-height: 20px;
-			font-size: 20px;
+			height: 25px;
+			width: 25px;
+			line-height: 25px;
+			font-size: 25px;
 			border: 0;
 			background-color: transparent;
 			color: #ef424d;
 			cursor: pointer;
 			outline: none;
+		}
+
+		.modal.ghost .close {
+			color: white;
 		}
 
 		.body {
@@ -111,14 +125,25 @@
 			padding: 0 20px 20px 20px;
 		}
 
-		.footer .button {
+		.button {
+			float: right;
 			padding: 10px;
 			margin: 0 5px 0 0;
 			border: none;
+			font-size: 0.9em;
 			text-transform: uppercase;
 			cursor: pointer;
 			outline: none;
 			background-color: white;
+		}
+
+		.modal.ghost .button {
+			color: white;
+			background-color: transparent;
+		}
+
+		.clear {
+			clear: both;
 		}
 	</style>
 
