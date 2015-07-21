@@ -55,7 +55,7 @@
 		.overlay.expanded,
 		.overlay.ghost.expanded {
 			left: 0;
-			background-color: rgba(0, 0, 0, 0.7);
+			background-color: rgba(0, 0, 0, 0.8);
 			-webkit-transition: background-color 0.8s ease, left 0s;
 			-moz-transition: background-color 0.8s ease, left 0s;
 			-ms-transition: background-color 0.8s ease, left 0s;

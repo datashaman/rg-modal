@@ -1,4 +1,4 @@
-riot.tag('demo-app', '<rg-modal modal="{ modal }"> <p>To make the modal appear or disappear simply toggle the modal\'s <code>visible</code> property.</p> <pre><code>this.modal.visible = true|false;</code></pre> </rg-modal> <rg-modal modal="{ ghostModal }"> <p>To make the modal appear or disappear simply toggle the modal\'s <code>visible</code> property.</p> <pre><code>this.modal.visible = true|false;</code></pre> </rg-modal> <a href="#" onclick="{ showModal }">Show modal</a> | <a href="#" onclick="{ showGhostModal }">Show ghost modal</a>', function(opts) {
+riot.tag('demo-app', '<rg-modal modal="{ modal }"> <p>To make the modal appear or disappear simply toggle the modal\'s <code>visible</code> property.</p> <pre><code>this.modal.visible = true|false;</code></pre> </rg-modal> <rg-modal modal="{ ghostModal }"> <p>This is like a normal modal but without a body!</p> </rg-modal> <a href="#" onclick="{ showModal }">Show modal</a> | <a href="#" onclick="{ showGhostModal }">Show ghost modal</a>', function(opts) {
 		var _this = this;
 		_this.modal = {
 			heading: 'rg-modal',
