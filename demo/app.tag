@@ -13,50 +13,47 @@
 	<a href="#" onclick="{ showGhostModal }">Show ghost modal</a>
 
 	<script>
-		var _this = this;
-		_this.modal = {
+		this.modal = {
 			heading: 'rg-modal',
 			visible: true,
 			buttons: [
 				{
-					action: function () {
-						_this.modal.visible = false;
-					}, text: 'Ok', style: 'color: white; background-color: #1fadc5; border-radius: 3px;'
-				},
-				{
-					action: function () {
-						_this.modal.visible = false;
-					}, text: 'Cancel'
+					action: () => {
+						this.modal.visible = false
+					},
+					text: 'Ok',
+					style: 'color: white; background-color: #1fadc5; border-radius: 3px;'
+				}, {
+					action: () => {
+						this.modal.visible = false
+					},
+					text: 'Cancel'
 				}
 			]
-		};
+		}
 
-		_this.ghostModal = {
+		this.ghostModal = {
 			heading: 'Ghost Modal',
 			ghost: true,
 			close: false,
 			buttons: [
 				{
-					action: function () {
-						_this.ghostModal.visible = false;
-					}, text: 'Ok', style: 'color: white; background-color: #1fadc5; border-radius: 3px;'
-				},
-				{
-					action: function () {
-						_this.ghostModal.visible = false;
-					}, text: 'Cancel'
+					action: () => {
+						this.ghostModal.visible = false
+					},
+					text: 'Ok',
+					style: 'color: white; background-color: #1fadc5; border-radius: 3px;'
+				}, {
+					action: () => {
+						this.ghostModal.visible = false;
+					},
+					text: 'Cancel'
 				}
 			]
-		};
+		}
 
-
-		_this.showModal = function () {
-			_this.modal.visible = true;
-		};
-
-		_this.showGhostModal = function () {
-			_this.ghostModal.visible = true;
-		};
+		this.showModal = () => this.modal.visible = true
+		this.showGhostModal = () => this.ghostModal.visible = true
 	</script>
 
 </demo-app>
