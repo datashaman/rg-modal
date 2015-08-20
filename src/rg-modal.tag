@@ -22,13 +22,10 @@
 	</div>
 
 	<script>
-		var _this = this;
-		_this.close = function (e) {
-			opts.modal.visible = false;
-			if (opts.modal.onclose) {
-				opts.modal.onclose(e);
-			}
-		};
+		this.close = e => {
+			opts.modal.visible = false
+			if (opts.modal.onclose) opts.modal.onclose(e)
+		}
 	</script>
 
 	<style scoped>
